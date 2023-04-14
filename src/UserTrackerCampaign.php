@@ -4,7 +4,7 @@ namespace Guillaumesouillard\UserTrackerGrpd;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Campaign extends Model
+class UserTrackerCampaign extends Model
 {
     protected $fillable = [
         'name',

@@ -9,14 +9,6 @@
             "Guillaumesouillard\\UserTrackerGrpd\\": "src/"
         }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Guillaumesouillard\\UserTrackerGrpd\\Installer::postInstall"
-        ],
-        "post-update-cmd": [
-            "Guillaumesouillard\\UserTrackerGrpd\\Installer::postUpdate"
-        ]
-    },
     "authors": [
         {
             "name": "guillaumesouillard"
