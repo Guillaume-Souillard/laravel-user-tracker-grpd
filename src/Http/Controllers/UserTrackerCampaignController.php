@@ -10,9 +10,13 @@ class UserTrackerCampaignController extends Controller
 {
     public function incrementBuyTotal(Request $request)
     {
+        $request->validate([
+            'total_amount' => 'required|int'
+        ]);
+
         $source = $request->cookie(UserTrackerCampaign::COOKIE_NAME);
         if ($source) {
-            UserTrackerCampaignLogic::incrementBuy($source);
+            UserTrackerCampaignLogic::incrementBuy($source, $request->total_amount);
         }
 
         if ($request->has('forget_cookie') && $request->input('forget_cookie') == 'true') {

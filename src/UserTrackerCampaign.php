@@ -11,6 +11,6 @@ class UserTrackerCampaign extends Model
     protected $fillable = [
         'name',
         'register_total',
-        'buy_total',
+        'total_revenue',
     ];
 }

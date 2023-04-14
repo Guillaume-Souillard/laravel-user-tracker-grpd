@@ -12,9 +12,9 @@ class UserTrackerCampaignLogic
         $campaign->increment('register_total');
     }
 
-    public static function incrementBuy(string $campaignName)
+    public static function incrementBuy(string $campaignName, int $value)
     {
         $campaign = UserTrackerCampaign::firstOrCreate(['name' => $campaignName]);
-        $campaign->increment('buy_total');
+        $campaign->increment('total_revenue', $value);
     }
 }
