@@ -5,6 +5,8 @@ namespace Guillaumesouillard\UserTrackerGrpd\Http\Controllers;
 use Guillaumesouillard\UserTrackerGrpd\Logics\UserTrackerCampaignLogic;
 use Guillaumesouillard\UserTrackerGrpd\UserTrackerCampaign;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class UserTrackerCampaignController extends Controller
 {
