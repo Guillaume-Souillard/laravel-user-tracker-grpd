@@ -21,7 +21,7 @@ class UserTrackerServiceProvider extends ServiceProvider
             ->middleware(['web', 'auth'])
             ->namespace('Guillaumesouillard\UserTrackerGrpd\Http\Controllers')
             ->group(function () {
-                Route::post('/increment/buy', 'BuyController@incrementBuyTotal');
+                Route::post('/increment/buy', 'BuyController@incrementBuyTotal')->name('ut.increment.buy');
             });
     }
 
