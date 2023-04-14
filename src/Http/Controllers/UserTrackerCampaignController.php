@@ -21,10 +21,6 @@ class UserTrackerCampaignController extends Controller
             UserTrackerCampaignLogic::incrementBuy($source, $request->total_amount);
         }
 
-        if ($request->has('forget_cookie') && $request->input('forget_cookie') == 'true') {
-            return response()->json(['msg' => 'ok with forget'])->cookie('source', null, -1);
-        } else {
-            return response()->json(['msg' => 'ok']);
-        }
+        return response()->json(['msg' => 'ok']);
     }
 }

@@ -3,6 +3,7 @@
 namespace Guillaumesouillard\UserTrackerGrpd\Logics;
 
 use Guillaumesouillard\UserTrackerGrpd\UserTrackerCampaign;
+use Illuminate\Support\Facades\Cookie;
 
 class UserTrackerCampaignLogic
 {
@@ -16,5 +17,7 @@ class UserTrackerCampaignLogic
     {
         $campaign = UserTrackerCampaign::firstOrCreate(['name' => $campaignName]);
         $campaign->increment('total_revenue', $value);
+
+        Cookie::queue(\cookie()->forget(UserTrackerCampaign::COOKIE_NAME));
     }
 }
