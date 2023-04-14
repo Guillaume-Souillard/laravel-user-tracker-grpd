@@ -12,7 +12,7 @@ class CreateCampaignsTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->unsignedInteger('register_total')->default(0);
-            $table->unsignedInteger('buy_total')->default(0);
+            $table->unsignedInteger('total_revenue')->default(0);
             $table->timestamps();
         });
     }
